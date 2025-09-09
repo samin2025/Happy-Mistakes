@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تمرین فرم و جدول</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background: url("backGC-t3.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1, h3, h2 {
+            margin: 10px 0; /* فاصله بالا و پایین */
+        }
+
+        h1 span, h3 span, h2 span {
+            background-color: rgba(0,0,0,0.5); /* پس‌زمینه نیمه شفاف */
+            color: white;
+            padding: 5px 15px; /* فضای دور متن */
+            border-radius: 4px;
+            display: inline-block; /* اندازه دقیق دور متن */
+        }
+
+        form {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            text-align: right;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover { background-color: #45a049; }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td { border: 1px solid #ddd; padding: 10px; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        tr:hover { background-color: #ddd; }
+    </style>
+</head>
+<body>
+    <h1><span>دوست داری با ما همراه باشی؟</span></h1>
+    <h3><span>بفرما👇</span></h3>
+
+    <form>
+        <label for="name">نام:</label>
+        <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید">
+
+        <label for="email">ایمیل:</label>
+        <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید">
+
+        <label for="password">رمز عبور:</label>
+        <input type="password" id="password" name="password" placeholder="رمز عبور">
+
+        <button type="submit">ثبت نام</button>
+    </form>
+
+    <h2><span>دوستان همراه</span></h2>
+    <table>
+        <tr>
+            <th>نام</th>
+            <th>ایمیل</th>
+            <th>سن</th>
+        </tr>
+        <tr>
+            <td>ثمین</td>
+            <td>samin@example.com</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>ثمر</td>
+            <td>samar@example.com</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>ثنا</td>
+            <td>sana@example.com</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>جای خالی شما دوست عزیز</td>
+            <td>@example.com?????</td>
+            <td>?</td>
+        </tr>
+    </table>
+
+    <script>
+        const persianDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+        document.querySelectorAll("table td:nth-child(3)").forEach(td => {
+            td.textContent = td.textContent.replace(/\d/g, d => persianDigits[d]);
+        });
+    </script>
+</body>
+</html>
