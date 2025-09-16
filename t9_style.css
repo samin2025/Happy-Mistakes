@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+/* هدر */
+header {
+  background: rgb(156, 45, 25);
+  color: rgba(12, 9, 204, 0.5);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  color: rgba(8, 21, 201, 0.616);
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* بخش معرفی */
+.hero {
+  background: #83095421;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+  color: #011670;
+}
+
+.hero p {
+  color: #0b737a;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+p {
+  margin-bottom: 20px;
+}
+/* فرم تماس */
+.contact {
+  padding: 40px 20px;
+  background: rgba(83, 0, 0, 0.185);
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input, .contact button {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.contact input {
+  border: 1px solid #1a0a5e;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #640404;
+  color: rgb(155, 150, 206);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #e20486;
+}
+
+/* فوتر */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #03445e;
+  color: rgb(110, 134, 156);
+  font-size: 14px;
+}
